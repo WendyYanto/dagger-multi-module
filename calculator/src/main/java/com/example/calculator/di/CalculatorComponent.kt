@@ -1,29 +1,16 @@
 package com.example.calculator.di
 
-import android.app.Application
 import com.example.calculator.ui.CalculatorActivity
-import com.example.core.di.CoreModule
-import dagger.BindsInstance
-import dagger.Component
-import javax.inject.Singleton
+import dagger.Subcomponent
 
-@Singleton
-@Component(
+
+@CalculatorScope
+@Subcomponent(
     modules = [
-        CalculatorModule::class,
-        CoreModule::class
+        CalculatorModule::class
     ]
 )
 interface CalculatorComponent {
 
     fun inject(calculatorActivity: CalculatorActivity)
-
-    @Component.Builder
-    interface Builder {
-
-        @BindsInstance
-        fun application(application: Application): Builder
-
-        fun build(): CalculatorComponent
-    }
 }

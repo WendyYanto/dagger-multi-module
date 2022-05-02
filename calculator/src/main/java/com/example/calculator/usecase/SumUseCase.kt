@@ -1,11 +1,16 @@
 package com.example.calculator.usecase
 
+import android.util.Log
 import com.example.calculator.R
 import com.example.core.resource.StringsProvider
 
 class SumUseCase(
     val stringsProvider: StringsProvider
 ) {
+
+    init {
+        Log.v("DAGGER", "created SumUseCase")
+    }
 
     fun execute(firstNumber: Int, secondNumber: Int): Result {
         return if (firstNumber > 0 && secondNumber > 0) {

@@ -1,6 +1,7 @@
 package com.example.multimodule.di
 
 import android.app.Application
+import com.example.calculator.di.CalculatorComponent
 import com.example.core.di.SuscriptionModule
 import com.example.multimodule.MainActivity
 import dagger.BindsInstance
@@ -25,4 +26,6 @@ interface ApplicationComponent {
 
         fun build(): ApplicationComponent
     }
+
+    fun calculatorComponent(): CalculatorComponent
 }
