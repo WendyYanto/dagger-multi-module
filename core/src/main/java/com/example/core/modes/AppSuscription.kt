@@ -11,7 +11,5 @@ class AppSuscription(
         //Currently just one app type, so one suscription
         return stringsProvider.getString(R.string.suscription_free_title)
     }
-
-
 }
 
